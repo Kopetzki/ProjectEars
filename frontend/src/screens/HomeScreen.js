@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Row,Col, Carousel, CarouselItem, Image} from 'react-bootstrap'
+import { Row,Col, Carousel, CarouselItem, Image, Jumbotron, Container} from 'react-bootstrap'
 import Books from '../components/Books'
 import axios from 'axios'
 
@@ -10,7 +10,9 @@ function HomeScreen() {
     return (
         <div>
             <h1>Home Page</h1>
-            <Carousel pause = 'hover' className ='bg-black'>
+            <Jumbotron fluid>
+                <Container>
+                <Carousel pause = 'hover' className ='bg-black'>
                 <CarouselItem>
                    <Image src = './images/book1.jpg'></Image>
                 </CarouselItem>
@@ -20,9 +22,9 @@ function HomeScreen() {
                 <CarouselItem>
                     <Image src = '/images/book3.jpg'></Image>
                 </CarouselItem>
-
-
             </Carousel>
+                </Container>
+            </Jumbotron>
         </div>
     )
 }
