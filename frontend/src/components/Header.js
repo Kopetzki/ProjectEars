@@ -18,15 +18,15 @@ function Header() {
                    
                     <Nav className="mr-auto">
                         <LinkContainer to='/books'>
-                            <Nav.Link ><i className='fas fa-book'></i>Books</Nav.Link>
+                            <Nav.Link ><i className='fas fa-book'></i> Books</Nav.Link>
                         </LinkContainer>
                         
                         <LinkContainer to= '/audio'>
-                        <Nav.Link ><i className='fas fa-microphone'></i>Audio</Nav.Link>
+                        <Nav.Link ><i className='fas fa-microphone'></i> Audio</Nav.Link>
                         </LinkContainer>
 
                         <LinkContainer to = '/sign up'>
-                            <Nav.Link> Login/Sign Up</Nav.Link>
+                            <Nav.Link> Login / Sign Up</Nav.Link>
                         </LinkContainer>
                       
                     </Nav>
@@ -35,6 +35,8 @@ function Header() {
                     </Container>
             </Navbar>
 
+            
+                
             </header>
         
     )

@@ -3,9 +3,6 @@ import { Row,Col } from 'react-bootstrap'
 import Books from '../components/Books'
 import axios from 'axios'
 
-
-
-
 function BookScreen(){
     const [books, setBooks] = useState([])
 

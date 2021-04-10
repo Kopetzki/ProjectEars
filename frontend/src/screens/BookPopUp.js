@@ -8,11 +8,10 @@ import Rating from '../components/Rating'
 
 function BookPopUp({match}) {
 
-
     const [book, setBook] = useState([])
     const mystyle = {
-        width:"100%",
-        height:"350%"
+        width:"150%",
+        height:"200%"
       };
 
     useEffect(() => {
@@ -26,18 +25,41 @@ function BookPopUp({match}) {
 
 
     return (
-        <div>
-            <Link to='/books' className= 'btn btn-light my-3'> Go Back</Link>
+        <div>  
+            <Col md={3}>
+            <Link to='/books'>
+                <Button  variant="outline-primary">Go Back</Button>
+            </Link>
+            </Col><br></br>
+            
             <Row>
-
                 <Col md={3}>
                     <ListGroup variant="flush">
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-primary">Book name: {book.name}</li><br></br>
+                        <br></br>
+                        <li class="list-group-item list-group-item-primary">Book Name: {book.name}</li>
                         <li class="list-group-item list-group-item-success">Category: {book.category}</li>
                         <li class="list-group-item list-group-item-primary">Age Group: {book.age}</li>
                         <li class="list-group-item list-group-item-success">Description: {book.description}</li>
                     </ul> 
+                    <h3>TOP OR BOTTOM??</h3>
+                    <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    Book name
+                        <span class="badge badge-primary badge-pill">{book.name}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Category
+                        <span class="badge badge-primary badge-pill">{book.category}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Age Group
+                        <span class="badge badge-primary badge-pill">{book.age}</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Description {book.description}
+                    </li>
+                    </ul>
                     </ListGroup>
                 </Col>
                 
