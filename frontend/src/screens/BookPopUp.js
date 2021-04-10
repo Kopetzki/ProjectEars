@@ -10,6 +10,10 @@ function BookPopUp({match}) {
 
 
     const [book, setBook] = useState([])
+    const mystyle = {
+        width:"100%",
+        height:"350%"
+      };
 
     useEffect(() => {
 
@@ -25,21 +29,20 @@ function BookPopUp({match}) {
         <div>
             <Link to='/books' className= 'btn btn-light my-3'> Go Back</Link>
             <Row>
-                <Col lg={6}>
-                    <Image src= {book.image} alt= {book.name} fluid/>
 
-                </Col>
-                
                 <Col md={3}>
                     <ListGroup variant="flush">
-                        <h3>
-                            {book.name}
-                        </h3>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-primary">Book name: {book.name}</li><br></br>
+                        <li class="list-group-item list-group-item-success">Category: {book.category}</li>
+                        <li class="list-group-item list-group-item-primary">Age Group: {book.age}</li>
+                        <li class="list-group-item list-group-item-success">Description: {book.description}</li>
+                    </ul> 
                     </ListGroup>
                 </Col>
                 
-                <Col md={3}>
-
+                <Col lg={6}>
+                <iframe scrolling="no" style = {mystyle} src= {book.heyzine_link}></iframe>
 
                 </Col>
 
