@@ -61,6 +61,8 @@ function BookPopUp({match}) {
                     </li>
                     </ul>
                     </ListGroup>
+
+                    
                 </Col>
                 
                 <Col lg={6}>
