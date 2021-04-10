@@ -17,7 +17,7 @@ function BookScreen(){
 
     return (
         <div>
-            <h1>Flippin Awesome Books</h1>
+            <h1 align="center">Flippin' Awesome Books</h1>
             <Row>
                 {books.map(books => (
                     <Col key={books._id} sm={12} md={6} lg={4} xl={3}>

@@ -9,7 +9,7 @@ import books from '../books'
 function HomeScreen() {
     return (
         <div>
-            <h1>Home Page</h1>
+            <h1 align="center">Home Page</h1>
             <Jumbotron fluid>
                 <Container>
                 <Carousel pause = 'hover' className ='bg-black'>

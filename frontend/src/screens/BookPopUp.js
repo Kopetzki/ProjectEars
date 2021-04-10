@@ -11,7 +11,7 @@ function BookPopUp({match}) {
     const [book, setBook] = useState([])
     const mystyle = {
         width:"150%",
-        height:"200%"
+        height:"150%"
       };
 
     useEffect(() => {
