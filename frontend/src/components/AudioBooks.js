@@ -47,7 +47,7 @@ function AudioModal() {
 
 function AudioBooks({audiobooks}) {
     return (
-        <Card className= 'my-3 p-3 rounded'>
+        <Card className= 'my-3 p-3 rounded' style={{ backgroundColor: '#fee9ad' }}>
             <Link to={`/audio/${audiobooks._id}`}>
                 <Card.Img src={audiobooks.image} />
             </Link>

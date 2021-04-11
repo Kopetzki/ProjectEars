@@ -1,5 +1,5 @@
 import React from 'react'
-import { Navbar, Nav, Container, Row } from 'react-bootstrap'
+import { Navbar, Nav, Container } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 
 
@@ -7,10 +7,10 @@ function Header() {
     return (
         
         <header>
-            <Navbar bg= 'light' variant = "blue" expand="lg" collapseOnSelect>
+            <Navbar variant = "blue" expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand href="/home"><i className='fas fa-stopwatch '></i>20TogetherMinutes </Navbar.Brand>
+                        <Navbar.Brand href="/home"><i className='fas fa-stopwatch'></i> 20 Together Minutes</Navbar.Brand>
                     </LinkContainer>
                 
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

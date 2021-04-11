@@ -18,7 +18,7 @@ function AudioModal() {
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Listlen and Learn</Modal.Title>
+            <Modal.Title>Listen and Learn</Modal.Title>
           </Modal.Header>
           <Modal.Body>
 

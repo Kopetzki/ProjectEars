@@ -10,8 +10,9 @@ function BookPopUp({match}) {
 
     const [book, setBook] = useState([])
     const mystyle = {
-        width:"150%",
-        height:"150%"
+        width:"300%",
+        height:"300%",
+        
       };
 
     useEffect(() => {
@@ -37,38 +38,24 @@ function BookPopUp({match}) {
                     <ListGroup variant="flush">
                     <ul class="list-group">
                         <br></br>
-                        <li class="list-group-item list-group-item-primary">Book Name: {book.name}</li>
-                        <li class="list-group-item list-group-item-success">Category: {book.category}</li>
-                        <li class="list-group-item list-group-item-primary">Age Group: {book.age}</li>
-                        <li class="list-group-item list-group-item-success">Description: {book.description}</li>
+                        <li class="list-group-item">BOOK NAME: {book.name}</li>
+                        <li class="list-group-item">CATEGORY: {book.category}</li>
+                        <li class="list-group-item">AGE GROUP: {book.age}</li>
+                        <li class="list-group-item">DESCRIPTION: {book.description}</li>
                     </ul> 
-                    <h3>TOP OR BOTTOM??</h3>
-                    <ul class="list-group">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                    Book name
-                        <span class="badge badge-primary badge-pill">{book.name}</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Category
-                        <span class="badge badge-primary badge-pill">{book.category}</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Age Group
-                        <span class="badge badge-primary badge-pill">{book.age}</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                        Description {book.description}
-                    </li>
-                    </ul>
                     </ListGroup>
-
+                </Col>
                     
-                </Col>
-                
-                <Col lg={6}>
+                {/*</Col>
+                <Col md={3}>
                 <iframe scrolling="no" style = {mystyle} src= {book.heyzine_link}></iframe>
-
-                </Col>
+                </Col>*/}
+                <div class="bookImage">
+                    <a href={book.heyzine_link} target="_blank">
+                        <img src={book.image} class="fp-thumb"></img>
+                    </a>
+                    </div>
+            
 
             </Row>
         </div>

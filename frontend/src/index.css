@@ -1,5 +1,37 @@
 main{
-      min-height: 80vh;
+      min-height: 100vh;
+      background-color: #cbe3ff;
+}
+
+.navbar{
+  background-color: #fee9ad;
+}
+
+.logo-backs{
+  min-height: max-content;
+}
+
+.jumbotron{
+  background-color: #cbe3ff;
+}
+
+.p-3{
+  background-color: #fee9ad;
+}
+
+.footer{
+  background-color: #fee9ad;
+}
+
+li.list-group-item{
+  background-color: #fee9ad;
+}
+
+.bookImage {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 /* carousel */
@@ -7,6 +39,7 @@ main{
 .carousel-item-prev,
 .carousel-item.active {
   display: flex;
+  background-color: #cbe3ff;
 }
 .carousel-caption {
   position: absolute;
@@ -19,10 +52,8 @@ main{
 
 .carousel img {
   display:block;
-  height: 300px;
-  padding: 30px;
-  margin: 40px;
-  border-radius: 70%;
+  height: 10%;
+  border-radius: 15%;
   margin-left: auto;
   margin-right: auto;
 }
