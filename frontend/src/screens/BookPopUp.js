@@ -10,8 +10,8 @@ function BookPopUp({match}) {
 
     const [book, setBook] = useState([])
     const mystyle = {
-        width:"300%",
-        height:"300%",
+        width:"100%",
+        height:"100%",
         
       };
 
@@ -52,7 +52,7 @@ function BookPopUp({match}) {
                 </Col>*/}
                 <div class="bookImage">
                     <a href={book.heyzine_link} target="_blank">
-                        <img src={book.image} class="fp-thumb"></img>
+                        <img src={book.image} class="fp-thumb" style={mystyle}></img>
                     </a>
                     </div>
             

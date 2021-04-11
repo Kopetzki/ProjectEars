@@ -1,11 +1,10 @@
 import React from 'react'
-import { Navbar, Nav, Container } from 'react-bootstrap'
-import { LinkContainer } from 'react-router-bootstrap'
+import { Navbar, Nav, Container, NavDropdown} from 'react-bootstrap'
+import { LinkContainer, Link} from 'react-router-bootstrap'
 
 
 function Header() {
-    return (
-        
+    return (    
         <header>
             <Navbar variant = "blue" expand="lg" collapseOnSelect>
                 <Container>
@@ -13,29 +12,44 @@ function Header() {
                         <Navbar.Brand href="/home"><i className='fas fa-stopwatch'></i> 20 Together Minutes</Navbar.Brand>
                     </LinkContainer>
                 
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"><i className="fas fa-bars"></i></Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                    
                     <Nav className="mr-auto">
-                        <LinkContainer to='/books'>
-                            <Nav.Link ><i className='fas fa-book'></i> Books</Nav.Link>
-                        </LinkContainer>
-                        
-                        <LinkContainer to= '/audio'>
-                        <Nav.Link ><i className='fas fa-microphone'></i> Audio</Nav.Link>
-                        </LinkContainer>
 
-                        <LinkContainer to = '/sign up'>
-                            <Nav.Link> Login / Sign Up</Nav.Link>
-                        </LinkContainer>
-                      
+                    <NavDropdown title={<span><i className="fa fa-book"></i> Books</span>} id="basic-nav-dropdown" to="/books">
+                            <LinkContainer to="/books">
+                            <NavDropdown.Item>All Books</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/category">
+                            <NavDropdown.Item>Book Categories</NavDropdown.Item>
+                            </LinkContainer>
+                        </NavDropdown>
+
+                        <NavDropdown title={<span><i className="fa fa-microphone"></i> AudioBooks</span>} id="basic-nav-dropdown" to="/books">
+                            <LinkContainer to="/audio">
+                            <NavDropdown.Item id="nav-dropdown-item">All Audio</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/category">
+                            <NavDropdown.Item>Book Categories</NavDropdown.Item>
+                            </LinkContainer>
+                        </NavDropdown>  
                     </Nav>
-                
+                    <Nav>
+                        <LinkContainer to='/login'>
+                            <Nav.Link>Login</Nav.Link>
+                        </LinkContainer>    
+
+                        <LinkContainer to='/signup'>
+                            <Nav.Link>Sign Up</Nav.Link>
+                        </LinkContainer>
+                                         
+                    </Nav>
+                    
                     </Navbar.Collapse>
                     </Container>
+                    
             </Navbar>
-
-            
                 
             </header>
         

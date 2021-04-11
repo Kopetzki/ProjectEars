@@ -24,8 +24,8 @@ def getRoutes(request):
 @api_view(['GET'])
 def getBooks(request):
     books = Book.objects.all()
-    serialzer = BookSerializer(books, many=True)
-    return Response( serialzer.data )#this will return the JSON to front
+    serializer = BookSerializer(books, many=True)
+    return Response( serializer.data )#this will return the JSON to front
 
 #WILL RETURN BOOK BY ID
 @api_view(['GET'])
