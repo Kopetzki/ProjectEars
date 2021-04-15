@@ -1,4 +1,5 @@
-import { LIBRARY_ADD_ITEM } from '../constants/libraryConstants'
+import { LIBRARY_ADD_ITEM , LIBRARY_REMOVE_ITEM} from '../constants/libraryConstants'
+
 
 
 
@@ -23,9 +24,14 @@ export const libraryReducer = (state = {libraryItems:[]}, action) =>{
                     libraryItems:[...state.libraryItems, item]
                 }
             }
-
-        default:
-            return state
+        
+        case LIBRARY_REMOVE_ITEM:
+            return{
+                ...state, //get current state and filter. will return new array 
+                libraryItems: state.libraryItems.filter(x => x.book !== action.payload)
+            }
+    default:
+        return state
     }
 
 }

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { LIBRARY_ADD_ITEM } from '../constants/libraryConstants'
+import { LIBRARY_ADD_ITEM , LIBRARY_REMOVE_ITEM} from '../constants/libraryConstants'
 
 export const addToLibrary = (id) => async(dispatch, getState) => {
     const {data} = await axios.get(`/api/books/${id}`)
@@ -19,4 +19,13 @@ export const addToLibrary = (id) => async(dispatch, getState) => {
     localStorage.setItem('libraryItems', JSON.stringify(getState().library.libraryItems))
 
 
+}
+
+export const removeFromLibrary = (id) => (dispatch, getState) => {
+    dispatch({
+        type: LIBRARY_REMOVE_ITEM,
+        payload: id,
+    })
+
+    localStorage.setItem('libraryItems', JSON.stringify(getState().library.libraryItems))
 }
