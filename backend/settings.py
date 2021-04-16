@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 
 import os
-import django_heroku
 import dotenv
 import dj_database_url
 
@@ -156,7 +155,10 @@ ALLOWED_HOSTS = ['*']
 
 # for heroku deployment
 
-django_heroku.settings(locals())
+
 
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
+
+import django_heroku
+django_heroku.settings(locals())
