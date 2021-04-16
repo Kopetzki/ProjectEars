@@ -139,18 +139,16 @@ django_heroku.settings(locals())
 
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
 
 #pointing back to static folder 
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
-STATICFILES_DIRS = []
 
 
 #for user uploaded content we set the area to place content
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
 
+STATICFILES_DIRS = []
+STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ORIGIN_WHITELIST = [
