@@ -19,7 +19,6 @@ import django_heroku
 
 
 
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,8 +37,6 @@ SECRET_KEY = '4ffgbv=iks#=64+s=7=06zx#h5s$9946qf%vzz*h_m=i1t^%)y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-
-ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -156,12 +153,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-CORS_ALLOW_ALL_ORIGINS = True
-ALLOWED_HOSTS = ['*']
+CORS_ORIGIN_WHITELIST = [
+    'https://localhost:3000',
+]
+
+ALLOWED_HOSTS = ['project-ears.herokuapp.com', '127.0.0.1:8000', 'localhost']
 
 
 # for heroku deployment
-
 
 
 options = DATABASES['default'].get('OPTIONS', {})
