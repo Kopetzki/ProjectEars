@@ -10,6 +10,10 @@ import HomeScreen from './screens/HomeScreen'
 import BookScreen from './screens/BookScreen'
 import BookPopUp from './screens/BookPopUp'
 import AudioScreen from './screens/AudioScreen'
+import axios from 'axios';
+
+axios.defaults.xsrfCookieName = 'csrftoken'
+axios.defaults.xsrfHeaderName = 'X-CSRFToken'
 
 function App() {
   return (
