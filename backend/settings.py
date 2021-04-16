@@ -15,6 +15,9 @@ from pathlib import Path
 import dj_database_url
 import os
 import dotenv
+import django_heroku
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -135,21 +138,23 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+django_heroku.settings(locals())
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/images/'
+MEDIA_URL = '/media/'
 
 #pointing back to static folder 
-STATIFILES_DIRS = [
-    os.path.join(BASE_DIR, 'build/static')
-]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'build', 'static')
+STATICFILES_DIRS = []
+
 
 #for user uploaded content we set the area to place content
-MEDIA_ROOT = 'static/image'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = ['*']
