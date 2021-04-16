@@ -24,9 +24,7 @@ dotenv_file = os.path.join(BASE_DIR, ".env")
 if os.path.isfile(dotenv_file):
     dotenv.load_dotenv(dotenv_file)
 
-# for heroku deployment
 
-django_heroku.settings(locals())
 
 
 # Quick-start development settings - unsuitable for production
@@ -54,6 +52,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
 
+    'books',
     'books.apps.BooksConfig',
 
 ]
@@ -155,6 +154,9 @@ CORS_ALLOW_ALL_ORIGINS = True
 ALLOWED_HOSTS = ['*']
 
 
+# for heroku deployment
+
+django_heroku.settings(locals())
 
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)
