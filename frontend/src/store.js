@@ -3,7 +3,7 @@ import thunk from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import { bookListReducer, bookDetailsReducer } from './reducers/bookReducers'
 import { libraryReducer } from './reducers/libraryReducers'
-import { userLoginReducer } from './reducers/usersReducers'
+import { userLoginReducer, userRegisterReducer, userDetailsReducer} from './reducers/usersReducers'
 /*will trigger first reducer and set books to initial state8*/
 
 const reducer = combineReducers({
@@ -11,6 +11,8 @@ const reducer = combineReducers({
     bookDetails: bookDetailsReducer,
     library: libraryReducer,
     userLogin: userLoginReducer,
+    userRegister: userRegisterReducer,
+    userDetails: userDetailsReducer,
 
 })
 //we us this function to grab data from local storage and add to initial state

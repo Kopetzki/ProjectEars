@@ -9,7 +9,8 @@ import BookScreen from './screens/BookScreen'
 import BookPopUp from './screens/BookPopUp'
 import LibraryScreen from './screens/LibraryScreen'
 import LoginScreen from './screens/LoginScreen'
-
+import RegisterScreen from './screens/RegisterScreen'
+import ProfileScreen from './screens/ProfileScreen'
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
         <Container>
             <Route path='/' component={HomeScreen} exact />
             <Route path='/login' component={LoginScreen} />
+            <Route path='/register' component= {RegisterScreen}/>
+            <Route path='/profile' component= {ProfileScreen}/>
             <Route path='/books/' component={BookScreen} />
             <Route path='/book/:id' component={BookPopUp} />
             <Route path='/library/:id?'component={LibraryScreen}/>
