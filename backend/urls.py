@@ -18,10 +18,12 @@ from django.urls import path, include
 
 from django.conf import settings 
 from django.conf.urls.static import static #imported to work with static files
+from .views import index
 from rest_framework import routers
 
 
 urlpatterns = [
+    path('', index, name='index'),
     path('admin/', admin.site.urls),
     path('api/', include('books.urls')),
    
