@@ -29,7 +29,7 @@ function LibraryScreen({match,location, history}) {
     }, [dispatch, bookId, qty])
 
 
-    const removeFromLibrary = (id) => {
+    const removeFromLibraryHandler = (id) => {
         dispatch(removeFromLibrary(id))
     }
 
@@ -61,7 +61,7 @@ function LibraryScreen({match,location, history}) {
                                     <Button
                                         type='button'
                                         variant='light'
-                                        onClick={() => removeFromLibrary(item.book)}>
+                                        onClick={() => removeFromLibraryHandler(item.book)}>
                                             Remove From Library
                                     </Button>
                                     </Col>
