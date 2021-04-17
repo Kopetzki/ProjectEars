@@ -42,18 +42,17 @@ DEBUG = True
 # Application definition
 
 INSTALLED_APPS = [
+    'backend',
+    'books',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
     'whitenoise.runserver_nostatic',
     'rest_framework',
     'corsheaders',
-
-    'books.apps.BooksConfig',
 
 ]
 
@@ -77,7 +76,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'build')],
+        'DIRS': [os.path.join(BASE_DIR, 'build'), os.path.join(BASE_DIR, "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,6 +90,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
+
+TEMPLATE_DIRS = [os.path.join(BASE_DIR, "templates")]
 
 
 # Database
@@ -139,10 +140,6 @@ django_heroku.settings(locals())
 
 
 STATIC_URL = '/static/'
-
-
-
-
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
