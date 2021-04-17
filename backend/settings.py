@@ -74,8 +74,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'backend.urls'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -142,13 +140,16 @@ django_heroku.settings(locals())
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
+
+
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'build/static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
 
 CORS_ORIGIN_WHITELIST = [
     'https://localhost:3000',
@@ -160,6 +161,8 @@ ALLOWED_HOSTS = ['project-ears.herokuapp.com', '127.0.0.1:8000', 'localhost']
 # for heroku deployment
 import django_heroku
 django_heroku.settings(locals())
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 options = DATABASES['default'].get('OPTIONS', {})
 options.pop('sslmode', None)

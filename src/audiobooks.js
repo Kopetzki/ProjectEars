@@ -2,7 +2,7 @@ const books = [
     {
       '_id': '1',
       'name': 'book1',
-      'image': '/images/book1.jpg',
+      'image': '/images/recreo.jpg',
       'description': '',
       'brand': '',
       'category': 'Adventure',

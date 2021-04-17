@@ -2,7 +2,7 @@ books = [
     {
       '_id': '1',
       'name': 'Have You Filled a Bucket Today?',
-      'image': '/images/book1.jpg',
+      'image': '/images/recreo.jpg',
       'description': '',
       'brand': '',
       'category': 'Adventure',

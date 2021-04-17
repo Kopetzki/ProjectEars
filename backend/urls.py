@@ -26,9 +26,10 @@ from rest_framework import routers
 urlpatterns = [
     path('', index, name='index'),
     path('admin/', admin.site.urls),
-    path('api/', include('books.urls')),
-   
-   
+    # path('api/', include('books.urls')),
+    path('api/books/', include('books.urls.book_urls')),
+    path('api/users/', include('books.urls.user_urls')),
+    path('api/library/', include('books.urls.library_urls')),
 
 ]
 #adding path to static, set url to folder and connect
