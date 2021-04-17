@@ -47,7 +47,12 @@ function Header() {
                             <LinkContainer to="/category">
                             <NavDropdown.Item>Audio Categories</NavDropdown.Item>
                             </LinkContainer>
-                        </NavDropdown>  
+                        </NavDropdown> 
+        
+                         <LinkContainer to= '/library'>
+                        <Nav.Link ><i className='fas fa-library'></i>Library</Nav.Link>
+                        </LinkContainer>
+        
                     </Nav>
                     <Nav>
                     { userInfo ? (
