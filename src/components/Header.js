@@ -53,6 +53,10 @@ function Header() {
                         <Nav.Link ><i className='fas fa-library'></i>Library</Nav.Link>
                         </LinkContainer>
         
+                         <LinkContainer to = 'project-ears.herokuapp.com/admin/'>
+                                <Nav.Link> Admin Portal</Nav.Link>
+                        </LinkContainer>
+        
                     </Nav>
                     <Nav>
                     { userInfo ? (
@@ -75,10 +79,7 @@ function Header() {
                                 <Nav.Link> Register</Nav.Link>
                                 </LinkContainer> 
 
-                        <LinkContainer href = 'project-ears.herokuapp.com/admin/'>
-                                <Nav.Link> Admin Portal</Nav.Link>
-                        </LinkContainer>
-                                         
+                    
                     </Nav>
                     
                     </Navbar.Collapse>
