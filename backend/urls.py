@@ -19,11 +19,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static #imported to work with static files
 from .views import index
+from django.views.generic import TemplateView
 from rest_framework import routers
 
 
 urlpatterns = [
     path('', index, name='index'),
+    path('site/', TemplateView.as_view(template_name='index.html')),
     path('admin/', admin.site.urls),
     path('api/', include('books.urls')),
    
