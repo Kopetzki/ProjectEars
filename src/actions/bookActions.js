@@ -53,3 +53,24 @@ export const listBookDetails = (id) => async (dispatch) => {
         })
     }
 }
+
+export const listBookDetails = (id) => async (dispatch) => {
+    try {
+        dispatch({ type: BOOK_DETAILS_REQUEST }) /*this will fire off reducer*/
+
+        const { data } = await axios.get(`/api/books/${id}`) /*api call*/
+
+        dispatch({
+            type: BOOK_DETAILS_SUCCESS,
+            payload: data
+        })
+
+    } catch (error) {
+        dispatch({
+            type: BOOK_DETAILS_FAIL,
+            payload: error.response && error.response.data.detail
+                ? error.response.data.detail
+                : error.message,
+        })
+    }
+}
