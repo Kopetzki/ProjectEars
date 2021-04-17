@@ -31,7 +31,7 @@ function App() {
             <Route path='/login/'component={LoginScreen}/>
             <Route path='/register/'component={RegisterScreen}/>
             <Route path='/profile/'component={ProfileScreen}/>
-            <Route path='/library/'component={LibraryScreen}/>
+            <Route path='/library/:id?'component={LibraryScreen}/>
 
         </Container>
       </main>
