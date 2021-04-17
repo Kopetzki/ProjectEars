@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap'
 import { Modal } from 'react-bootstrap'
 import React, { useState } from 'react'
 import ReactAudioPlayer from 'react-audio-player'
-import AudioModal from './AudioModal'
+import AudioModal from'./AudioModal'
 {/*
 function AudioModal() {
     const [show, setShow] = useState(false);
@@ -47,7 +47,7 @@ function AudioModal() {
 
 function AudioBooks({audiobooks}) {
     return (
-        <Card className= 'my-3 p-3 rounded' style={{ backgroundColor: '#fee9ad' }}>
+        <Card className= 'my-3 p-3 rounded'>
             <Link to={`/audio/${audiobooks._id}`}>
                 <Card.Img src={audiobooks.image} />
             </Link>
