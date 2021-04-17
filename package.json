@@ -31,10 +31,10 @@
     "npm": "7.7.6"
   },
   "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "description": "frontend",
   "main": "index.js",

@@ -1,72 +1,70 @@
 main{
-      min-height: 100vh;
-      background-color: #cbe3ff;
+  min-height: 100vh;
+  background-color: #cbe3ff;
 }
 
 .navbar{
-  background-color: #fee9ad;
+background-color: #fee9ad;
 }
 
-
-
 .logo-backs{
-  min-height: max-content;
+min-height: max-content;
 }
 
 .jumbotron{
-  background-color: #cbe3ff;
-  height: 150%;
+background-color: #ededed;
+height: 150%;
 }
 
 .p-3{
-  background-color: #fee9ad;
+background-color: #fee9ad;
 }
 
 .footer{
-  background-color: #fee9ad;
+background-color: #fee9ad;
 }
 
 li.list-group-item{
-  background-color: #fee9ad;
+background-color: #fee9ad;
 }
 
 .bookImage {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 40%;
 }
 
 .dropdown-item > li > a:hover, .dropdown-item > li > a:focus {
-  background-image:none !important;
+background-image:none !important;
 }
 /* carousel */
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
-  display: flex;
-  background-color: #cbe3ff;
+display: flex;
+background-color: #ededed;
 }
 .carousel-caption {
-  position: absolute;
-  top: 0;
+position: absolute;
+top: 0;
 }
 
 .carousel-caption h4 {
-  color: rgb(128, 104, 218);
+color: rgb(128, 104, 218);
 }
 
 .carousel img {
-  display:block;
-  border-radius: 10%;
-  margin-left: auto;
-  margin-right: auto;
+display:block;
+border-radius: 10%;
+margin-left: auto;
+margin-right: auto;
 }
 .carousel a {
-  margin: 0 auto;
+margin: 0 auto;
 }
 @media (max-width: 900px) {
-  .carousel-caption h2 {
-    font-size: 2.5vw;
-  }
+.carousel-caption h2 {
+font-size: 2.5vw;
+}
 }

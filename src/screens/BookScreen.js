@@ -28,7 +28,7 @@ import { listBooks } from '../actions/bookActions'
     
     return (
         <div>
-            <h1>Flippin Awesome Books</h1>
+            <h1 align="center">Flippin Awesome Books</h1>
                 { loading ? <h2>Loading....</h2>
                     : error ? <h3>{error}</h3>
                     : <Row>

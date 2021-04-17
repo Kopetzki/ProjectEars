@@ -6,10 +6,6 @@ import { Button } from 'react-bootstrap'
 import { Modal } from 'react-bootstrap'
 import React, { useState } from 'react'
 
-
-
-
-
 function Books({books}) {
     return (
         <Card className= 'my-3 p-3 rounded'>
@@ -18,9 +14,7 @@ function Books({books}) {
             </Link>
             <Card.Body>
 
-                
-
-              <Link to={'https:heyzine.com/flip-book/2f58000614.html'}>
+              <Link to={`/book/${books._id}`}>
                 <Card.Title as="div">
                     <strong>{books.name}</strong>
                 </Card.Title>
@@ -28,7 +22,7 @@ function Books({books}) {
 
               <Card.Text as="div">
                   <div className ='my-3'>
-                      <Rating value = {books.rating} text = {`${books.numReviews} reviews`} color={'#f8e825'}/>
+                      <Rating value = {books.rating} text = {`${books.numReviews} reviews`} color={'#ededed'}/>
                   </div>
               </Card.Text>
               

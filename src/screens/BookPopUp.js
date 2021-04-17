@@ -11,6 +11,11 @@ import { listBookDetails } from '../actions/bookActions'
 
 function BookPopUp({match , history}) {
      const dispatch = useDispatch()
+     const mystyle = {
+        width:"100%",
+        height:"100%",
+        
+      };
      const bookDetails = useSelector(state => state.bookDetails)
      const {loading, error, book} = bookDetails
 
@@ -30,39 +35,42 @@ function BookPopUp({match , history}) {
         history.push(`/library/${match.params.id}`)
     }
     
-    return (
-        <div>
-            <Link to='/books' className= 'btn btn-light my-3'> Go Back</Link>
-            <Row>
-                <Col lg={6}>
-                    <Image src= {book.image} alt= {book.name} fluid/>
+    return (        
+        <div>  
+        <Col md={3}>
+        <Link to='/books'>
+            <Button  variant="outline-primary">Return To Library</Button><br></br>
+        </Link>
 
-                </Col>
+        </Col><br></br>
+        
+        <Row>
+            <Col md={3}>
+                <ListGroup variant="flush">
+                <ul class="list-group">
+                    <br></br>
+                    <li class="list-group-item">BOOK NAME: {book.name}</li>
+                    <li class="list-group-item">CATEGORY: {book.category}</li>
+                    <li class="list-group-item">AGE GROUP: {book.age}</li>
+                    <li class="list-group-item">DESCRIPTION: {book.description}</li>
+                </ul> 
+                </ListGroup><br></br>
+
+            <Button onClick={addToLibrary} className='btn-block' type='button'>
+                Add to Library
+            </Button>
+
+            </Col>            
                 
-                <Col md={3}>
-                    <ListGroup variant="flush">
-                        <h3>
-                            {book.name}
-                        </h3>
-                        <ListGroup.Item>
-                                <Button
-                                    onClick={addToLibrary}
-                                    className='btn-block'
-                                  //  disabled={product.countInStock == 0}
-                                    type='button'>
-                                     Add to Library
-                                </Button>
-                                            </ListGroup.Item>                        
-                    </ListGroup>
-                </Col>
-                
-                <Col md={3}>
+            <div class="bookImage">
+                <a href={book.heyzine_link} target="_blank">
+                    <img src={book.image} class="fp-thumb" style={mystyle}></img>
+                </a>
+                </div>
+        
 
-
-                </Col>
-
-            </Row>
-        </div>
+        </Row>
+    </div>
     )
 }
 

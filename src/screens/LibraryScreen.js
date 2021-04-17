@@ -35,7 +35,6 @@ function LibraryScreen({match,location, history}) {
 
     return (
        <Row>
-           
 
             <Col md = {8}>
                 <h1>Library</h1>

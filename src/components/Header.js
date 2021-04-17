@@ -20,29 +20,37 @@ function Header() {
     return (
         
         <header>
-            <Navbar bg= 'light' variant = "blue" expand="lg" collapseOnSelect>
+            <Navbar variant = "blue" expand="lg" collapseOnSelect>
                 <Container>
                     <LinkContainer to='/'>
-                        <Navbar.Brand href="/home"><i className='fas fa-stopwatch '></i>20TogetherMinutes </Navbar.Brand>
+                        <Navbar.Brand href="/home"><i className='fas fa-stopwatch'></i> 20 Together Minutes</Navbar.Brand>
                     </LinkContainer>
                 
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Toggle aria-controls="basic-navbar-nav"><i className="fas fa-bars"></i></Navbar.Toggle>
                     <Navbar.Collapse id="basic-navbar-nav">
                    
                     <Nav className="mr-auto">
-                        <LinkContainer to='/books'>
-                            <Nav.Link ><i className='fas fa-book'></i>Books</Nav.Link>
-                        </LinkContainer>
-                        
-                        <LinkContainer to= '/audio'>
-                        <Nav.Link ><i className='fas fa-microphone'></i>Audio</Nav.Link>
-                        </LinkContainer>
 
-                        <LinkContainer to= '/library'>
-                        <Nav.Link ><i className='fas fa-library'></i>Library</Nav.Link>
-                        </LinkContainer>
+                    <NavDropdown title={<span><i className="fa fa-book"></i> Books</span>} id="basic-nav-dropdown" to="/books">
+                            <LinkContainer to="/books">
+                            <NavDropdown.Item>All Books</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/category">
+                            <NavDropdown.Item>Book Categories</NavDropdown.Item>
+                            </LinkContainer>
+                        </NavDropdown>
 
-                        { userInfo ? (
+                        <NavDropdown title={<span><i className="fa fa-microphone"></i> AudioBooks</span>} id="basic-nav-dropdown" to="/books">
+                            <LinkContainer to="/audio">
+                            <NavDropdown.Item id="nav-dropdown-item">All Audio</NavDropdown.Item>
+                            </LinkContainer>
+                            <LinkContainer to="/category">
+                            <NavDropdown.Item>Audio Categories</NavDropdown.Item>
+                            </LinkContainer>
+                        </NavDropdown>  
+                    </Nav>
+                    <Nav>
+                    { userInfo ? (
                             <NavDropdown title = {userInfo.name} id = 'username'>
                                 <LinkContainer to = '/profile'> 
                                     <NavDropdown.Item>Profile</NavDropdown.Item>
@@ -54,19 +62,22 @@ function Header() {
                         ) : (
 
                                 <LinkContainer to = '/login'>
-                                <Nav.Link> Login/Sign Up</Nav.Link>
-                                </LinkContainer> 
+                                <Nav.Link> Login</Nav.Link>
+                                </LinkContainer>
+                                 
                         )}
-
-                        
-                      
+                        <LinkContainer to = '/register'>
+                                <Nav.Link> Register</Nav.Link>
+                                </LinkContainer> 
+                                         
                     </Nav>
-                
+                    
                     </Navbar.Collapse>
                     </Container>
+                    
             </Navbar>
-
-            </header>
+                
+            </header>            
         
     )
 }
