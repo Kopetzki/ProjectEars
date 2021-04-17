@@ -74,6 +74,10 @@ function Header() {
                         <LinkContainer to = '/register'>
                                 <Nav.Link> Register</Nav.Link>
                                 </LinkContainer> 
+
+                        <LinkContainer href = 'project-ears.herokuapp.com/admin/'>
+                                <Nav.Link> Admin Portal</Nav.Link>
+                        </LinkContainer>
                                          
                     </Nav>
                     
