@@ -25,7 +25,6 @@ from rest_framework import routers
 
 urlpatterns = [
     path('', index, name='index'),
-    path('site/', TemplateView.as_view(template_name='index.html')),
     path('admin/', admin.site.urls),
     path('api/', include('books.urls')),
    
