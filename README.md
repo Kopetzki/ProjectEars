@@ -4,7 +4,7 @@
 
 ### Developed by:
 
-Project E.A.R.S. - Edin S., Ana A., Roberto S. & Steven P. .
+Team E.A.R.S. - Edin S., Ana A., Roberto S. & Steven P. .
 
 ## Product Description
 
