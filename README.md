@@ -30,10 +30,6 @@ Commands include:
 - Flipbook backlog loading
 - Reading progress feature
 
-## Deployed Web Application
-
-Visit https://project-ears.herokuapp.com/ to experiece the app first hand.
-
 ## Codebase
 
 To run this repository locally, clone to your local machine. Open one terminal screen and at the root of the project run:
@@ -48,3 +44,13 @@ $ npm install
 $ npm run build
 ```
 Open your local server address as shown in first terminal screen!
+
+## Deployment
+
+To deploy new features of this app, follow the steps above to clone the repository and make local changes to the codebase. Upon testing, push updates to heroku app by running:
+```
+$ heroku git:remote -a project-ears
+$ git push heroku master
+```
+
+Visit https://project-ears.herokuapp.com/ to experience the app first hand.
