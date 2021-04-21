@@ -53,7 +53,7 @@ function Header() {
                         <Nav.Link ><i className='fas fa-library'></i>Library</Nav.Link>
                         </LinkContainer>
         
-                         <LinkContainer to = 'project-ears.herokuapp.com/admin/'>
+                         <LinkContainer to = '/admin/'>
                                 <Nav.Link> Admin Portal</Nav.Link>
                         </LinkContainer>
         
