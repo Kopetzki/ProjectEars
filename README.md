@@ -32,7 +32,8 @@ Commands include:
 
 ## Codebase
 
-To run this repository locally, clone to your local machine. Open one terminal screen and at the root of the project run:
+To run this repository locally, clone to your local machine. Download latest Python version and Node.js to use Node Package Manager (NPM). 
+Next, open one terminal screen and at the root of the project run:
 
 ```
 $ pip install -r requirements.txt
