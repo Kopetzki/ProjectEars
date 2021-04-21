@@ -40,7 +40,7 @@ To run this repository locally, clone to your local machine. Open one terminal s
 
 ```
 $ pip install -r requirements.txt
-$ python3 manage.py runserver
+$ python manage.py runserver
 ```
 In another terminal tab run at root directory:
 ```
