@@ -33,4 +33,4 @@ urlpatterns = [
 
 ]
 #adding path to static, set url to folder and connect
-urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
+#urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
