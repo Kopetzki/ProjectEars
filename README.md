@@ -53,5 +53,23 @@ To deploy new features of this app, follow the steps above to clone the reposito
 $ heroku git:remote -a project-ears
 $ git push heroku master
 ```
+Set the following environmental variables for heroku deployment
+
+```
+$ heroku config:set AWS_ACCESS_KEY_ID=your AWS access key
+$ heroku config:set AWS_SECRET_ACCESS_KEY=your AWS secret access key
+$ heroku config:set AWS_STORAGE_BUCKET_NAME=your s3 storage bucket name
+$ heroku config:set AWS_S3_CUSTOM_DOMAIN=your cloudfire domain name
+```
+
+to run locally create a .env file in the project folder and create these variables
+
+```
+DATABASE_URL=sqlite:///db.sqlite3
+AWS_ACCESS_KEY_ID = your AWS access key
+AWS_SECRET_ACCESS_KEY = your AWS secret access key
+AWS_STORAGE_BUCKET_NAME = your s3 storage bucket name
+AWS_S3_CUSTOM_DOMAIN = your cloudfire domain name
+```
 
 Visit https://project-ears.herokuapp.com/ to experience the app first hand.
