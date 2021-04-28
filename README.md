@@ -53,7 +53,7 @@ To deploy new features of this app, follow the steps above to clone the reposito
 $ heroku git:remote -a project-ears
 $ git push heroku master
 ```
-Set the following environmental variables for heroku deployment
+Set the following environmental variables for heroku deployment -- *These were established after final handoff submission to rectify media files issue.* 
 
 ```
 $ heroku config:set AWS_ACCESS_KEY_ID=your AWS access key
